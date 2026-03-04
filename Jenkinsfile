@@ -36,13 +36,7 @@ pipeline {
             }
         }
 
-        stage('Approval') {
-            steps {
-                script {
-                    input message: 'Approve deployment?', ok: 'Deploy'
-                }
-            }
-        }
+        
 
         stage('Deploy Docker Image') {
             steps {
